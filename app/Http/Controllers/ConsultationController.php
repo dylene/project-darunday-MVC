@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ConsultationController extends Controller
+class ConsultationController extends Controller {
 
+    public function index(){
+        return view('consultation');
+    }
 
-{public function store(Request $request)
+    public function store(Request $request)
 
     {
+        //need to transfer this to model
         $consultation = new consultation();
         $consultation->name = $request->input('name');
         $consultation->email = $request->input('email');

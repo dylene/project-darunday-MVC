@@ -17,8 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/consultation', function () {
-    return view('consultation');
-});
+// Route::get('/consultation', function () {
+//     return view('consultation');
+// });
+
+Route::get('/consultation', [ConsultationController::class, 'index'])->name('consultation.index');
+
+Route::post('/consultation-s', [ConsultationController::class, 'store'])->name('consultation.store');
 
 
