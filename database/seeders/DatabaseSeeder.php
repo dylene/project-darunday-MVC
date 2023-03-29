@@ -17,19 +17,30 @@ class DatabaseSeeder extends Seeder
     {
        
         
-        DB::table('consultations')->insert([
+        DB::table('modals')->insert([
             [
-                'name' => 'dyell Darunday',
-                'email' => '1901102087@gmail.com',
-                'phone' => "12312312312321",
-                'message' => "I love rey mac",
-            ],
+                'id'        => '1',
+                'title'     => 'Product 1',
+                'desc'      => 'Lorem ipsum, dolor sit amet consectetur',
+                'image'     => 'assets/img/portfolio/product-1.jpg',
+            ]
+        ]);
+        DB::table('modals')->insert([
             [
-                'name' => 'Dylene Darunday',
-                'email' => '1901102087@gmail.com',
-                'phone' => "12312312312321",
-                'message' => "I love rey mac",
-            ],
+                'id'        => '2',
+                'title'     => 'Product 2',
+                'desc'      => 'Lorem ipsum, dolor sit amet consectetur',
+                'image'     => 'assets/img/portfolio/product-2.jpg',
+            ]
+
+        ]);
+        DB::table('modals')->insert([
+            [
+                'id'        => '3', 
+                'title'     => 'Product 3',
+                'desc'      => 'Lorem ipsum, dolor sit amet consectetur',
+                'image'     => 'assets/img/portfolio/product-3.jpg',
+            ]
 
         ]);
     }

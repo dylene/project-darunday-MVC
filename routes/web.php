@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ConsultatiionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +23,5 @@ Route::get('/', function () {
 //     return view('consultation');
 // });
 
-Route::get('/consultation', [ConsultationController::class, 'index'])->name('consultation.index');
-
-Route::post('/consultation-s', [ConsultationController::class, 'store'])->name('consultation.store');
-
-
+Route::get('/consultation', [ConsultatiionController::class, 'index'])->name('consultation');
+Route::resource('/admin',AdminController::class);
